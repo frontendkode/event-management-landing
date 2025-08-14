@@ -1,0 +1,28 @@
+<header class="custom-header col-md-12 d-flex align-items-center justify-content-center sticky-top px-3 px-md-0 ">
+    <div class="col-md-11 col-12  d-flex align-items-center justify-content-between py-3">
+        <!-- Brand -->
+        <a href="#" class="fw-bold fs-4  text-uppercase text-decoration-none">Brand</a>
+
+        <!-- Hamburger (Mobile) -->
+        <button class="d-lg-none btn p-0 border-0" type="button" (click)="toggleMenu()">
+            <span class="burger-line d-block mb-1"></span>
+            <span class="burger-line d-block mb-1"></span>
+            <span class="burger-line d-block"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="custom-menu d-lg-flex align-items-center gap-4  " [class.active]="menuOpen">
+            <a href="#" class=" fw-medium text-uppercase">Home</a>
+            <a href="#" class=" fw-medium text-uppercase">Feature</a>
+            <a href="#" class=" fw-medium text-uppercase">Product</a>
+            <a href="#" class=" fw-medium text-uppercase">Article</a>
+            <a href="#" class=" fw-medium text-uppercase">Support</a>
+
+            <!-- Register Button -->
+            <a href="#" class="btn btn-outline-light ms-lg-4 mt-3 mt-lg-0 ">Register</a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" [class.active]="menuOpen" (click)="toggleMenu()"></div>
+</header>
